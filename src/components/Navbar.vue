@@ -97,16 +97,35 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 export default {
   setup() {
     const isShowing = ref(false);
+    const computeWidth = ref(window.innerWidth);
 
     const showNav = () => {
       isShowing.value = !isShowing.value;
     };
 
-    return { showNav, isShowing };
+    const updateWidth = () => {
+      computeWidth.value = window.innerWidth;
+      if (computeWidth.value >= 1200) {
+        isShowing.value = true;
+      } else {
+        isShowing.value = false;
+      }
+    };
+
+    onMounted(() => {
+      updateWidth();
+      window.addEventListener("resize", updateWidth);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("resize", updateWidth);
+    });
+
+    return { showNav, isShowing, computeWidth, updateWidth };
   },
 };
 </script>
