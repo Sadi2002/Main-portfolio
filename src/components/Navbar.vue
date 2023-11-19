@@ -25,8 +25,9 @@
               <p class="letter">B</p>
               <p class="letter">O</p>
               <p class="letter">U</p>
-              <p class="letter"></p></div
-          ></a>
+              <p class="letter">T</p>
+            </div></a
+          >
         </li>
         <li class="navigation-item">
           <a href="#" class="navigation-link"
