@@ -18,6 +18,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* NAVBAR */
+
 .navigation {
   height: 100vh;
   width: 250px;
@@ -27,6 +29,7 @@ body {
   border-right: 2px solid #151c25;
   transition: all linear 0.3s;
   font-family: "Poppins", sans-serif;
+  z-index: 100;
 }
 
 .show-navigation {
@@ -199,6 +202,54 @@ body {
   transition-delay: 0.66s;
 }
 
+/* WELCOME */
+
+.welcome-text {
+  padding-top: 120px;
+  font-family: "Poppins", sans-serif;
+}
+
+.welcome-title {
+  text-transform: uppercase;
+  color: #e1e1e1;
+  font-weight: bold;
+  font-size: 35px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.word {
+  color: #02050a;
+  position: relative;
+  -webkit-text-stroke: 0.3vw #3c3c3c;
+  text-transform: uppercase;
+}
+
+.word::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #55e6a5;
+  -webkit-text-stroke: 0vw #3c3c3c;
+  border-right: 2px solid #55e6a5;
+  overflow: hidden;
+  animation: typing 4s linear infinite;
+}
+
+.welcome-description {
+  padding: 0 30px;
+  color: #e1e1e1;
+}
+
+@media (400px <= width) {
+  .welcome-text {
+    padding: 120px 30px 0 30px;
+  }
+}
+
 @media (1200px <= width) {
   .navigation-top {
     height: 140px;
@@ -210,10 +261,26 @@ body {
   .navigation-icon {
     height: 62px;
     width: 62px;
-    margin-right: 15px;
+    margin-right: 20px;
   }
 
   .show-navigation {
     display: none;
+  }
+
+  .letter {
+    font-size: 14px;
+  }
+}
+
+@keyframes typing {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
   }
 }
