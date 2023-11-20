@@ -1,7 +1,10 @@
 <template>
+  <div v-if="isShowing" class="welcome-banner">
+    <img src="../assets/banner.png" alt="" />
+  </div>
   <div class="welcome-text">
     <h1 class="welcome-title">
-      Hi, i'm Lukas creative
+      Hi, i'm Lukas, creative
       <ul class="words-container">
         <li><span data-text="Developer" class="word">Developer</span></li>
       </ul>
@@ -13,17 +16,37 @@
       transforming intricate concepts into user-friendly interfaces that
       captivate and engage.
     </p>
+    <a class="cv" href="#">Download CV</a>
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 export default {
   setup() {
-    const isHiden = ref(false);
-    const isVisible = ref(true);
+    const isShowing = ref(false);
 
-    return { isHiden, isVisible };
+    const computeWidth = ref(window.innerWidth);
+
+    const updateWidth = () => {
+      computeWidth.value = window.innerWidth;
+      if (computeWidth.value >= 992) {
+        isShowing.value = true;
+      } else {
+        isShowing.value = false;
+      }
+    };
+
+    onMounted(() => {
+      updateWidth();
+      window.addEventListener("resize", updateWidth);
+    });
+
+    onUnmounted(() => {
+      window.removeEventListener("resize", updateWidth);
+    });
+
+    return { isShowing, updateWidth };
   },
 };
 </script>

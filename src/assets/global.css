@@ -242,11 +242,117 @@ body {
 .welcome-description {
   padding: 0 30px;
   color: #e1e1e1;
+  margin-bottom: 50px;
+}
+
+.cv {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #55e6a5;
+  margin: 0 auto;
+  font-weight: bold;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+.cv:hover {
+  background-color: #141c27;
+  color: #fff;
+}
+
+.welcome-banner img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* LOADING */
+
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #161616;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease-in-out 0.5s;
+}
+
+.loading.close {
+  height: 0;
+}
+
+.loading.close h2 {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+
+.loading h2 {
+  opacity: 1;
+  font-size: 100px;
+  color: #333;
+  background-attachment: fixed;
+  position: relative;
+  transition: all 0.5s;
+  transform: translateY(0);
+  font-size: 60px;
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  background-color: #55e6a5;
+  border-radius: 50%;
+  position: absolute;
+  left: -50px;
+  animation: move 4s linear infinite;
+  top: 00px;
+  z-index: -1;
 }
 
 @media (400px <= width) {
   .welcome-text {
     padding: 120px 30px 0 30px;
+  }
+}
+
+@media (992px <= width) {
+  .welcome-text {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  .welcome-title {
+    font-size: 50px;
+    text-align: left;
+  }
+
+  .welcome-description {
+    padding: 0;
+    line-height: 30px;
+    text-align: left;
+    max-width: 500px;
+  }
+
+  .cv {
+    margin: 0;
+  }
+
+  .loading h2 {
+    font-size: 80px;
+  }
+
+  .ball {
+    top: 10px;
   }
 }
 
@@ -271,6 +377,50 @@ body {
   .letter {
     font-size: 14px;
   }
+
+  .welcome-banner {
+    padding-left: 267px;
+  }
+
+  .welcome-text {
+    left: 267px;
+  }
+
+  .cv {
+    width: 200px;
+    font-size: 18px;
+  }
+  .loading h2 {
+    font-size: 100px;
+  }
+
+  .ball {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (1600px <= width) {
+  .welcome-title {
+    font-size: 60px;
+  }
+  .welcome-description {
+    font-size: 20px;
+    line-height: 35px;
+    max-width: 700px;
+  }
+
+  .cv {
+    width: 250px;
+    height: 70px;
+    font-size: 25px;
+  }
+}
+
+@media (1800px => width) {
+  .welcome-title {
+    font-size: 65px;
+  }
 }
 
 @keyframes typing {
@@ -282,5 +432,18 @@ body {
   70%,
   90% {
     width: 100%;
+  }
+}
+
+@keyframes move {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 80%;
+  }
+
+  100% {
+    left: 0px;
   }
 }
