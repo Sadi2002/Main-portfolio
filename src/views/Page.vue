@@ -1,16 +1,18 @@
 <template>
   <Navbar />
   <Welcome />
-  <Loading :close="closeLoading" />
+  <AboutMe />
+  <!-- <Loading :close="closeLoading" /> -->
 </template>
 
 <script>
 import Navbar from "../components/Navbar.vue";
 import Welcome from "../components/Welcome.vue";
+import AboutMe from "../components/AboutMe.vue";
 import Loading from "../components/Loading.vue";
 import { onMounted, ref } from "vue";
 export default {
-  components: { Navbar, Welcome, Loading },
+  components: { Navbar, Welcome, Loading, AboutMe },
 
   setup() {
     // const showLoading = ref(true);

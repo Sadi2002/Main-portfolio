@@ -207,6 +207,7 @@ body {
 .welcome-text {
   padding-top: 120px;
   font-family: "Poppins", sans-serif;
+  margin-bottom: 100px;
 }
 
 .welcome-title {
@@ -241,7 +242,7 @@ body {
 
 .welcome-description {
   padding: 0 30px;
-  color: #e1e1e1;
+  color: #a6a6a6;
   margin-bottom: 50px;
 }
 
@@ -315,6 +316,76 @@ body {
   animation: move 4s linear infinite;
   top: 00px;
   z-index: -1;
+}
+
+/* ABOUT ME */
+
+.about-me {
+  padding: 0 30px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.about-me-headline {
+  color: #55e6a5;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.about-me-title {
+  font-size: 26px;
+  color: #e1e1e1;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-me-left-side__box img {
+  width: 90px;
+}
+
+.about-me-left-side__title {
+  color: #e1e1e1;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about-me-left-side__description {
+  color: #a6a6a6;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+.about-me-left-side__box:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.about-me-right-side {
+  position: relative;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  z-index: -1;
+  animation: pulse 7s linear infinite;
+}
+
+.me {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-me-left-side {
+  margin-bottom: 100px;
 }
 
 @media (400px <= width) {
@@ -417,7 +488,7 @@ body {
   }
 }
 
-@media (1800px => width) {
+@media (1800px <= width) {
   .welcome-title {
     font-size: 65px;
   }
@@ -445,5 +516,17 @@ body {
 
   100% {
     left: 0px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
   }
 }
