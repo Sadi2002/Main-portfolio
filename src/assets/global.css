@@ -287,6 +287,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: all 0.8s ease-in-out 0.5s;
+  overflow: hidden;
 }
 
 .loading.close {
@@ -324,7 +325,7 @@ body {
 /* ABOUT ME */
 
 .about-me {
-  padding: 0 30px 100px;
+  padding: 0 30px 80px;
   font-family: "Poppins", sans-serif;
   display: flex;
   flex-direction: column;
@@ -332,7 +333,8 @@ body {
   overflow: hidden;
 }
 
-.about-me-headline {
+.about-me-headline,
+.service-headline {
   color: #55e6a5;
   font-size: 20px;
   text-transform: uppercase;
@@ -340,7 +342,8 @@ body {
   margin-bottom: 15px;
 }
 
-.about-me-title {
+.about-me-title,
+.service-title {
   font-size: 26px;
   color: #e1e1e1;
   text-align: center;
@@ -397,6 +400,66 @@ body {
   margin-bottom: 100px;
 }
 
+/* SERVICE */
+
+.service {
+  font-family: "Poppins", sans-serif;
+}
+
+.service-headline {
+  display: inline-block;
+}
+
+.service-title {
+  padding: 0 30px;
+  padding-bottom: 40px;
+}
+
+.service-box-title {
+  margin: 40px 0 20px;
+  text-align: left;
+  color: #e1e1e1;
+  text-transform: uppercase;
+}
+
+.service-box {
+  width: 90%;
+  padding: 30px;
+  background-color: #09101a;
+  margin-top: 115px;
+  position: relative;
+  border-radius: 5px;
+  margin: 75px auto 0;
+  max-width: 500px;
+  transition: all 0.4s;
+}
+
+.service-box i {
+  font-size: 40px;
+  color: #02050a;
+  padding: 12px;
+  background-color: #55e6a5;
+  border-radius: 5px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -45px;
+}
+
+.service-box-description {
+  text-align: left;
+  color: #a6a6a6;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* MEDIA QUERIES */
+
 @media (400px <= width) {
   .welcome-text {
     padding: 120px 30px 0 30px;
@@ -404,13 +467,27 @@ body {
 }
 @media (576px <= width) {
   .about-me {
-    padding: 0 60px;
+    padding: 0 60px 80px;
   }
 }
 
 @media (768px <= width) {
-  .about-me-title {
+  .service {
+    padding: 0 60px;
+  }
+
+  .about-me-title,
+  .service-title {
     font-size: 33px;
+  }
+
+  .service-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .service-box {
+    width: 45%;
   }
 }
 @media (850px <= width) {
@@ -536,6 +613,30 @@ body {
   .about-me-title {
     margin-bottom: 70px;
   }
+
+  .service-headline {
+    width: 100%;
+    text-align: left;
+  }
+
+  .service-title {
+    text-align: left;
+    margin: 0 0 50px;
+    padding: 0 0 40px;
+    max-width: 80%;
+  }
+
+  .service-container {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+}
+
+@media (1100px <= width) {
+  .service-title {
+    max-width: 80%;
+    /* margin: 0 auto 50px; */
+  }
 }
 
 @media (1200px <= width) {
@@ -584,6 +685,16 @@ body {
   .about-me {
     padding-left: 297px;
   }
+
+  .service {
+    padding-left: 297px;
+  }
+}
+
+@media (1300px <= width) {
+  .welcome-banner img {
+    object-fit: cover;
+  }
 }
 
 @media (1600px <= width) {
@@ -601,9 +712,7 @@ body {
     height: 70px;
     font-size: 22px;
   }
-  .welcome-banner img {
-    object-fit: cover;
-  }
+
   .about-me-title {
     width: 53%;
   }
@@ -635,6 +744,8 @@ body {
     left: auto;
   }
 }
+
+/* ANIMATIONS */
 
 @keyframes typing {
   0%,

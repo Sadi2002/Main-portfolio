@@ -2,7 +2,8 @@
   <Navbar />
   <Welcome />
   <AboutMe />
-  <!-- <Loading :close="closeLoading" /> -->
+  <Loading :close="closeLoading" />
+  <Service />
 </template>
 
 <script>
@@ -10,21 +11,24 @@ import Navbar from "../components/Navbar.vue";
 import Welcome from "../components/Welcome.vue";
 import AboutMe from "../components/AboutMe.vue";
 import Loading from "../components/Loading.vue";
+import Service from "../components/Service.vue";
 import { onMounted, ref } from "vue";
 export default {
-  components: { Navbar, Welcome, Loading, AboutMe },
+  components: { Navbar, Welcome, Loading, AboutMe, Service },
 
   setup() {
-    // const showLoading = ref(true);
-
     const closeLoading = ref(false);
 
     onMounted(() => {
       window.addEventListener("load", () => {
+        document.body.style.overflow = "hidden";
+
         setTimeout(() => {
-          // showLoading.value = false;
           closeLoading.value = true;
-        }, 3500);
+          setTimeout(() => {
+            document.body.style.overflow = "visible";
+          }, 1500);
+        }, 3000);
       });
     });
 
