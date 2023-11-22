@@ -361,6 +361,11 @@ body {
   font-weight: 400;
 }
 
+.about-me-left-side__box {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
 .about-me-left-side__box:not(:last-child) {
   margin-bottom: 50px;
 }
@@ -376,7 +381,7 @@ body {
   right: -50px;
   top: -50px;
   z-index: -1;
-  animation: pulse 7s linear infinite;
+  animation: pulse 5s linear infinite;
 }
 
 .me {
@@ -391,6 +396,45 @@ body {
 @media (400px <= width) {
   .welcome-text {
     padding: 120px 30px 0 30px;
+  }
+}
+@media (576px <= width) {
+  .about-me {
+    padding: 0 60px;
+  }
+}
+
+@media (768px <= width) {
+  .about-me-title {
+    font-size: 33px;
+  }
+}
+@media (850px <= width) {
+  .about-me-title {
+    font-size: 35px;
+  }
+}
+@media (900px <= width) {
+  .about-me-left-side {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  .about-me-left-side__box {
+    width: 50%;
+  }
+
+  .about-me-title {
+    max-width: 700px;
+  }
+
+  .square {
+    width: 250px;
+    height: 250px;
+    right: 100px;
+  }
+  .me {
+    max-width: 500px;
   }
 }
 
@@ -424,6 +468,35 @@ body {
 
   .ball {
     top: 10px;
+  }
+
+  .about-me {
+    padding: 130px 30px 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-me-headline {
+    width: 100%;
+    text-align: left;
+  }
+
+  .about-me-title {
+    text-align: left;
+    max-width: 100%;
+    width: 75%;
+    font-size: 39px;
+  }
+
+  .about-me-left-side__box {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .about-me-left-side {
+    flex-direction: column;
+    width: 100%;
   }
 }
 
