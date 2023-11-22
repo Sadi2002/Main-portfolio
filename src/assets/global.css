@@ -17,6 +17,8 @@ body {
   background-color: #02050a;
   font-family: "Poppins", sans-serif;
   height: 1000vh;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 /* NAVBAR */
@@ -595,9 +597,9 @@ body {
   }
 
   .cv {
-    width: 250px;
+    width: 200px;
     height: 70px;
-    font-size: 25px;
+    font-size: 22px;
   }
   .welcome-banner img {
     object-fit: cover;
@@ -619,6 +621,18 @@ body {
   }
   .square {
     right: 50px;
+  }
+}
+
+@media (1920px <= width) {
+  .welcome-text {
+    top: 20%;
+  }
+  #app {
+    position: relative;
+  }
+  .navigation {
+    left: auto;
   }
 }
 
