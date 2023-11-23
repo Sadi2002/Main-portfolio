@@ -477,6 +477,7 @@ body::-webkit-scrollbar-thumb {
 .skills {
   margin-top: 80px;
   padding-top: 75px;
+  padding-bottom: 30px;
   background-color: #09101a;
   font-family: "Poppins", sans-serif;
 }
@@ -521,11 +522,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .competencies-context {
-  border: 1px solid #e3e3e310;
   border-radius: 5px;
   width: 90%;
   margin: 0 auto;
-  padding: 30px 20px;
   min-height: 400px;
 }
 
@@ -546,10 +545,22 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
 }
 
+.context1-left,
+.context1-right {
+  border: 1px solid #e3e3e310;
+  padding: 30px 20px;
+}
+
+.context1-left {
+  margin-bottom: 20px;
+}
+
 .context-box-item {
   color: #a6a6a6;
-  width: 100%;
+  width: 50%;
   text-align: left;
+  margin-bottom: 5px;
+  font-size: 15px;
 }
 
 /* MEDIA QUERIES */
@@ -558,10 +569,22 @@ body::-webkit-scrollbar-thumb {
   .welcome-text {
     padding: 120px 30px 0 30px;
   }
+  .context-box-title {
+    font-size: 22px;
+  }
+  .context-box-item {
+    font-size: 16px;
+  }
 }
 @media (576px <= width) {
   .about-me {
     padding: 0 60px 80px;
+  }
+  .context-box-title {
+    font-size: 25px;
+  }
+  .context-box-item {
+    font-size: 20px;
   }
 }
 

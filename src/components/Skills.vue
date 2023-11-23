@@ -28,25 +28,40 @@
       </div>
       <div class="competencies-context">
         <div class="context-box" ref="context1">
-          <h3 class="context-box-title">
-            <i class="fas fa-angle-double-right"></i>Web development
-          </h3>
-          <ul class="context-box-list">
-            <li class="context-box-item">> HTML 5</li>
-            <li class="context-box-item">> CSS</li>
-            <li class="context-box-item">> Scss</li>
-            <li class="context-box-item">> JavaScript</li>
-            <li class="context-box-item">> Vue</li>
-            <li class="context-box-item">> Bootstrap</li>
-            <li class="context-box-item">> Bulma</li>
-            <li class="context-box-item">> Tailwind</li>
-            <li class="context-box-item">> PrestaShop</li>
-            <li class="context-box-item">> Firebase</li>
-            <li class="context-box-item">> MySQL</li>
-            <li class="context-box-item">> Jira</li>
-            <li class="context-box-item">> NPM</li>
-            <li class="context-box-item">> Webpack</li>
-          </ul>
+          <div class="context1-left">
+            <h3 class="context-box-title">
+              <i class="fas fa-angle-double-right"></i>Web development
+            </h3>
+            <ul class="context-box-list">
+              <li class="context-box-item">> HTML 5</li>
+              <li class="context-box-item">> CSS</li>
+              <li class="context-box-item">> Scss</li>
+              <li class="context-box-item">> JavaScript</li>
+              <li class="context-box-item">> Vue</li>
+              <li class="context-box-item">> Bootstrap</li>
+              <li class="context-box-item">> Bulma</li>
+              <li class="context-box-item">> Tailwind</li>
+              <li class="context-box-item">> PrestaShop</li>
+              <li class="context-box-item">> Firebase</li>
+              <li class="context-box-item">> MySQL</li>
+              <li class="context-box-item">> Git</li>
+              <li class="context-box-item">> NPM</li>
+              <li class="context-box-item">> Webpack</li>
+            </ul>
+          </div>
+          <div class="context1-right">
+            <h3 class="context-box-title">
+              <i class="fas fa-angle-double-right"></i>Design
+            </h3>
+            <ul class="context-box-list">
+              <li class="context-box-item">> PhotoShop</li>
+              <li class="context-box-item">> Illustor</li>
+              <li class="context-box-item">> Gimp</li>
+              <li class="context-box-item">> Blender</li>
+              <li class="context-box-item">> Adobe XD</li>
+              <li class="context-box-item">> Figma</li>
+            </ul>
+          </div>
         </div>
         <div class="context-box" ref="context2">Test 2</div>
         <div class="context-box" ref="context3">Test 3</div>
