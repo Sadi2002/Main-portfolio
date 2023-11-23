@@ -21,6 +21,18 @@ body {
   margin: 0 auto;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #02050a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #151c25;
+}
+
 /* NAVBAR */
 
 .navigation {
@@ -334,7 +346,8 @@ body {
 }
 
 .about-me-headline,
-.service-headline {
+.service-headline,
+.skills-headline {
   color: #55e6a5;
   font-size: 20px;
   text-transform: uppercase;
@@ -343,7 +356,8 @@ body {
 }
 
 .about-me-title,
-.service-title {
+.service-title,
+.skills-title {
   font-size: 26px;
   color: #e1e1e1;
   text-align: center;
@@ -456,6 +470,86 @@ body {
 
 .no-scroll {
   overflow: hidden;
+}
+
+/* SKILLS */
+
+.skills {
+  margin-top: 80px;
+  padding-top: 75px;
+  background-color: #09101a;
+  font-family: "Poppins", sans-serif;
+}
+
+.skills-headline {
+  display: inline-block;
+}
+
+.skills-title {
+  padding: 0 30px;
+}
+
+.competencies-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 60px;
+}
+
+.competencies-button {
+  background-color: #141c27;
+  padding: 10px 20px;
+  color: #e1e1e1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.competencies-button:hover {
+  background-color: #55e6a5;
+  color: #02050a;
+}
+
+.active-box {
+  background-color: #55e6a5;
+  color: #02050a;
+}
+
+.competencies-context {
+  border: 1px solid #e3e3e310;
+  border-radius: 5px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 20px;
+  min-height: 400px;
+}
+
+.context-box-title {
+  text-align: left;
+  color: #e1e1e1;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.fa-angle-double-right {
+  margin-right: 15px;
+  color: #55e6a5;
+}
+
+.context-box-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.context-box-item {
+  color: #a6a6a6;
+  width: 100%;
+  text-align: left;
 }
 
 /* MEDIA QUERIES */
@@ -689,6 +783,9 @@ body {
   .service {
     padding-left: 297px;
   }
+  .service-title {
+    font-size: 39px;
+  }
 }
 
 @media (1300px <= width) {
@@ -721,6 +818,9 @@ body {
   }
   .about-me-left-side__description {
     font-size: 18px;
+  }
+  .service-title {
+    max-width: 50%;
   }
 }
 
