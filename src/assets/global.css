@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #02050a;
   font-family: "Poppins", sans-serif;
@@ -496,6 +500,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   gap: 15px;
   margin-bottom: 60px;
+  padding: 0 20px;
 }
 
 .competencies-button {
@@ -533,6 +538,17 @@ body::-webkit-scrollbar-thumb {
   color: #e1e1e1;
   position: relative;
   margin-bottom: 30px;
+  position: relative;
+}
+
+.context-box-title::after {
+  background-color: #55e6a5;
+  width: 50px;
+  height: 1px;
+  position: absolute;
+  left: 33px;
+  bottom: -5px;
+  content: "";
 }
 
 .fa-angle-double-right {
@@ -546,12 +562,18 @@ body::-webkit-scrollbar-thumb {
 }
 
 .context1-left,
-.context1-right {
+.context1-right,
+.context2-left,
+.context2-right,
+.context3-left,
+.context3-right {
   border: 1px solid #e3e3e310;
   padding: 30px 20px;
 }
 
-.context1-left {
+.context1-left,
+.context2-left,
+.context3-left {
   margin-bottom: 20px;
 }
 
@@ -561,6 +583,46 @@ body::-webkit-scrollbar-thumb {
   text-align: left;
   margin-bottom: 5px;
   font-size: 15px;
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.context-box-item:hover {
+  color: #55e6a5;
+}
+
+.context-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.context-box-headline {
+  display: block;
+  padding-left: 30px;
+  color: #e1e1e1;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.context-box-time {
+  display: block;
+  padding-left: 30px;
+  text-align: left;
+  color: #e1e1e1;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.context2-left .context-box-title,
+.context3-left .context-box-title {
+  margin-bottom: 20px;
+}
+
+.context-box-description {
+  color: #a6a6a6;
+  text-align: left;
+  padding-left: 30px;
+  line-height: 25px;
 }
 
 /* MEDIA QUERIES */
@@ -573,7 +635,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 22px;
   }
   .context-box-item {
-    font-size: 16px;
+    font-size: 18px;
+  }
+  .context-box-title::after {
+    left: 35px;
   }
 }
 @media (576px <= width) {
@@ -586,6 +651,13 @@ body::-webkit-scrollbar-thumb {
   .context-box-item {
     font-size: 20px;
   }
+  .context-box-title::after {
+    left: 40px;
+  }
+  .context-box-headline,
+  .context-box-time {
+    font-size: 18px;
+  }
 }
 
 @media (768px <= width) {
@@ -594,7 +666,8 @@ body::-webkit-scrollbar-thumb {
   }
 
   .about-me-title,
-  .service-title {
+  .service-title,
+  .skills-title {
     font-size: 33px;
   }
 
@@ -605,6 +678,25 @@ body::-webkit-scrollbar-thumb {
 
   .service-box {
     width: 45%;
+  }
+  .context-box {
+    flex-direction: row;
+    gap: 30px;
+  }
+  .context1-right,
+  .context1-left,
+  .context2-right,
+  .context2-left,
+  .context3-right,
+  .context3-left {
+    width: 48%;
+    margin-bottom: 0;
+  }
+  .competencies-button {
+    padding: 15px 30px;
+  }
+  .context-box-title::after {
+    left: 37px;
   }
 }
 @media (850px <= width) {
@@ -747,12 +839,32 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: nowrap;
     gap: 30px;
   }
+
+  .skills {
+    padding: 75px 60px 30px;
+  }
+
+  .skills-headline {
+    width: 100%;
+    text-align: left;
+  }
+  .skills-title {
+    text-align: left;
+    padding: 0;
+  }
+  .competencies-buttons {
+    padding: 0;
+    justify-content: flex-start;
+  }
+  .competencies-context {
+    margin: 0;
+    width: 100%;
+  }
 }
 
 @media (1100px <= width) {
   .service-title {
     max-width: 80%;
-    /* margin: 0 auto 50px; */
   }
 }
 
@@ -809,6 +921,17 @@ body::-webkit-scrollbar-thumb {
   .service-title {
     font-size: 39px;
   }
+
+  .skills {
+    padding-left: 297px;
+  }
+
+  .skills-title {
+    font-size: 39px;
+  }
+  .competencies-button {
+    font-size: 20px;
+  }
 }
 
 @media (1300px <= width) {
@@ -858,7 +981,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (1920px <= width) {
   .welcome-text {
-    top: 20%;
+    top: 15%;
   }
   #app {
     position: relative;

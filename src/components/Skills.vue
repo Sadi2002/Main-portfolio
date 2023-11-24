@@ -63,8 +63,36 @@
             </ul>
           </div>
         </div>
-        <div class="context-box" ref="context2">Test 2</div>
-        <div class="context-box" ref="context3">Test 3</div>
+        <div class="context-box" ref="context2">
+          <div class="context2-left">
+            <h3 class="context-box-title">
+              <i class="fas fa-angle-double-right"></i>WSB
+            </h3>
+            <span class="context-box-headline">University of Gdańsk</span>
+            <span class="context-box-time">2022 - current</span>
+            <p class="context-box-description">
+              Beyond academics, WSB Gdańsk offers a vibrant student community,
+              various extracurricular activities, and opportunities for
+              networking and collaboration. The city of Gdańsk itself provides
+              an inspiring backdrop for learning, with its rich history,
+              cultural diversity, and dynamic tech scene.
+            </p>
+          </div>
+        </div>
+        <div class="context-box" ref="context3">
+          <div class="context3-left">
+            <h3 class="context-box-title">
+              <i class="fas fa-angle-double-right"></i>WeNet sp. z o.o
+            </h3>
+            <span class="context-box-headline">PrestaShop Developer</span>
+            <span class="context-box-time">2022 - 2023</span>
+            <p class="context-box-description">
+              As a PrestaShop developer, I've been entrusted with the
+              responsibility of designing, developing, and maintaining over 20
+              successful e-commerce websites within the span of a year.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -87,13 +115,13 @@ export default {
 
       switch (contextNumber) {
         case 1:
-          context1.value.style.display = "block";
+          context1.value.style.display = "flex";
           break;
         case 2:
-          context2.value.style.display = "block";
+          context2.value.style.display = "flex";
           break;
         case 3:
-          context3.value.style.display = "block";
+          context3.value.style.display = "flex";
           break;
       }
 
