@@ -690,6 +690,10 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 
+.backdrop-description {
+  padding: 0 20px;
+}
+
 .backdrop-title::after {
   content: "";
   position: absolute;
@@ -1261,6 +1265,9 @@ body::-webkit-scrollbar-thumb {
   }
   .service {
     padding-top: 50px;
+  }
+  .contact label {
+    font-size: 20px;
   }
 }
 
