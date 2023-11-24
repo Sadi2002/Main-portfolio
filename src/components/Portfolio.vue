@@ -12,11 +12,13 @@
           </p>
           <div class="backdrop-buttons">
             <a
+              target="_blank"
               href="https://live-chat-6e193.web.app/"
               class="backdrop-button active-box"
               >Live demo</a
             >
             <a
+              target="_blank"
               href="https://github.com/Sadi2002/Live-chat"
               class="backdrop-button"
               >See code</a
@@ -33,11 +35,13 @@
           </p>
           <div class="backdrop-buttons">
             <a
+              target="_blank"
               href="https://papierkamiennozycefun.netlify.app"
               class="backdrop-button active-box"
               >Live demo</a
             >
             <a
+              target="_blank"
               href="https://github.com/Sadi2002/rock---paper---scissors"
               class="backdrop-button"
               >See code</a
@@ -52,11 +56,13 @@
           <p class="backdrop-description">Single page application design</p>
           <div class="backdrop-buttons">
             <a
+              target="_blank"
               href="https://sadi2002.github.io/platform-landing-page/"
               class="backdrop-button active-box"
               >Live demo</a
             >
             <a
+              target="_blank"
               href="https://github.com/Sadi2002/platform-landing-page"
               class="backdrop-button"
               >See code</a
@@ -71,11 +77,13 @@
           <p class="backdrop-description">Multi page application design</p>
           <div class="backdrop-buttons">
             <a
+              target="_blank"
               href="https://sadi2002.github.io/Space-Project-working.../"
               class="backdrop-button active-box"
               >Live demo</a
             >
             <a
+              target="_blank"
               href="https://github.com/Sadi2002/Space-Project-working..."
               class="backdrop-button"
               >See code</a
