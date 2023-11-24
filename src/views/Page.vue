@@ -5,6 +5,7 @@
   <Loading :close="closeLoading" />
   <Service />
   <Skills />
+  <Portfolio />
 </template>
 
 <script>
@@ -14,9 +15,10 @@ import AboutMe from "../components/AboutMe.vue";
 // import Loading from "../components/Loading.vue";
 import Service from "../components/Service.vue";
 import Skills from "../components/Skills.vue";
+import Portfolio from "../components/Portfolio.vue";
 import { onMounted, ref } from "vue";
 export default {
-  components: { Navbar, Welcome, AboutMe, Service, Skills },
+  components: { Navbar, Welcome, AboutMe, Service, Skills, Portfolio },
 
   setup() {
     // const closeLoading = ref(false);

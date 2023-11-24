@@ -351,7 +351,8 @@ body::-webkit-scrollbar-thumb {
 
 .about-me-headline,
 .service-headline,
-.skills-headline {
+.skills-headline,
+.portfolio-headline {
   color: #55e6a5;
   font-size: 20px;
   text-transform: uppercase;
@@ -361,7 +362,8 @@ body::-webkit-scrollbar-thumb {
 
 .about-me-title,
 .service-title,
-.skills-title {
+.skills-title,
+.portfolio-title {
   font-size: 26px;
   color: #e1e1e1;
   text-align: center;
@@ -481,7 +483,7 @@ body::-webkit-scrollbar-thumb {
 .skills {
   margin-top: 80px;
   padding-top: 75px;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
   background-color: #09101a;
   font-family: "Poppins", sans-serif;
 }
@@ -530,7 +532,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   width: 90%;
   margin: 0 auto;
-  min-height: 400px;
+  min-height: 200px;
 }
 
 .context-box-title {
@@ -571,9 +573,7 @@ body::-webkit-scrollbar-thumb {
   padding: 30px 20px;
 }
 
-.context1-left,
-.context2-left,
-.context3-left {
+.context1-left {
   margin-bottom: 20px;
 }
 
@@ -625,6 +625,138 @@ body::-webkit-scrollbar-thumb {
   line-height: 25px;
 }
 
+/* PORTFOLIO */
+
+.portfolio {
+  font-family: "Poppins", sans-serif;
+  margin-top: 80px;
+  padding-bottom: 80px;
+}
+
+.portfolio-headline {
+  display: inline-block;
+}
+
+.portfolio-title {
+  padding: 0 30px;
+}
+
+.portfolio-box {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-box-img {
+  position: relative;
+}
+
+.portfolio-box-img .portfolio-box-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.6s;
+  padding: 20px;
+  visibility: hidden;
+}
+
+.portfolio-box-img:hover .portfolio-box-backdrop,
+.portfolio-box-img:focus .portfolio-box-backdrop {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio-box img {
+  width: 90%;
+  margin: 0 auto;
+  border-radius: 15px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.backdrop-title,
+.backdrop-description {
+  color: #e1e1e1;
+  font-size: 25px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  position: relative;
+}
+
+.backdrop-title::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  left: 50%;
+  bottom: 0px;
+  transform: translateX(-50%);
+  background-color: #55e6a5;
+  height: 2px;
+}
+
+.backdrop-description {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.backdrop-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.backdrop-button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #151c25;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.backdrop-button:hover {
+  background-color: #55e6a5;
+  color: #09101a;
+}
+
+.backdrop-button.active-box {
+  background-color: #55e6a5;
+  color: #09101a;
+}
+
+.show-more {
+  width: 150px;
+  height: 40px;
+  background-color: #55e6a5;
+  color: #09101a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.show-more a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.show-more:hover {
+  background-color: #141c27;
+  color: #e1e1e1;
+}
+
 /* MEDIA QUERIES */
 
 @media (400px <= width) {
@@ -639,6 +771,9 @@ body::-webkit-scrollbar-thumb {
   }
   .context-box-title::after {
     left: 35px;
+  }
+  .portfolio-box img {
+    min-height: 250px;
   }
 }
 @media (576px <= width) {
@@ -658,6 +793,21 @@ body::-webkit-scrollbar-thumb {
   .context-box-time {
     font-size: 18px;
   }
+
+  .portfolio-box-img {
+    width: 48%;
+  }
+
+  .portfolio-box img {
+    width: 100%;
+    min-height: auto;
+  }
+  .portfolio-box {
+    padding: 0 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }
 
 @media (768px <= width) {
@@ -667,7 +817,8 @@ body::-webkit-scrollbar-thumb {
 
   .about-me-title,
   .service-title,
-  .skills-title {
+  .skills-title,
+  .portfolio-title {
     font-size: 33px;
   }
 
@@ -697,6 +848,13 @@ body::-webkit-scrollbar-thumb {
   }
   .context-box-title::after {
     left: 37px;
+  }
+  .portfolio-box img {
+    width: 100%;
+    min-height: 250px;
+  }
+  .portfolio-box {
+    margin-bottom: 50px;
   }
 }
 @media (850px <= width) {
