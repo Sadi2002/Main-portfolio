@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isShowing" class="welcome-banner">
+  <div v-if="isShowing" class="welcome-banner" id="home">
     <img src="../assets/banner.png" alt="" />
   </div>
   <div class="welcome-text">

@@ -1,5 +1,5 @@
 <template>
-  <div class="service">
+  <div class="service" id="service">
     <span class="service-headline">My Service</span>
     <h2 class="service-title">
       Bringing your vision to life with precision and passion

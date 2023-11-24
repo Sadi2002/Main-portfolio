@@ -1,5 +1,5 @@
 <template>
-  <div class="about-me">
+  <div class="about-me" id="about">
     <span class="about-me-headline">About me</span>
     <h2 class="about-me-title">Passionate learner exploring web development</h2>
     <div class="both-sides">
@@ -13,9 +13,6 @@
             are dedicated to expanding my knowledge and honing web development
             skills.
           </p>
-          <!-- Motivated by a genuine passion for creating user-friendly
-            digital experiences, I strive to become a more proficient front-end
-            enthusiast with each passing day. -->
         </div>
         <div class="about-me-left-side__box">
           <img src="../assets/purpose.png" alt="purpose logo" />
@@ -27,9 +24,6 @@
             intensive self-learning, aiming to deepen my knowledge and refine my
             skills in web development.
           </p>
-          <!-- Motivated by an authentic ambition to
-            stand out in the field, every day is a stride toward achieving
-            excellence and becoming a highly skilled front-end enthusiast." -->
         </div>
       </div>
       <div class="about-me-right-side">

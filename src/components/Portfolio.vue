@@ -1,5 +1,5 @@
 <template>
-  <div class="portfolio">
+  <div class="portfolio" id="portfolio">
     <span class="portfolio-headline">My Recent Portfolio</span>
     <h2 class="portfolio-title">Crafting Visual Experiences</h2>
     <div class="portfolio-box">
