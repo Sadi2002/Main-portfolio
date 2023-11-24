@@ -1149,7 +1149,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (1200px <= width) {
   .navigation-top {
-    height: 140px;
+    height: 100px;
   }
 
   .navigation-bottom .navigation-link {
