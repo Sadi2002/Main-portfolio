@@ -7,7 +7,7 @@
     <div class="navigation-bottom">
       <ul class="navigation-list">
         <li class="navigation-item">
-          <a href="#" class="navigation-link">
+          <a @click="closeNavigation" href="#" class="navigation-link">
             <span class="navigation-icon"><i class="fas fa-home"></i></span>
             <div class="navigation-text">
               <p class="letter">H</p>
@@ -18,7 +18,7 @@
           </a>
         </li>
         <li class="navigation-item">
-          <a href="#about" class="navigation-link"
+          <a @click="closeNavigation" href="#about" class="navigation-link"
             ><span class="navigation-icon"><i class="far fa-id-card"></i></span>
             <div class="navigation-text">
               <p class="letter">A</p>
@@ -30,7 +30,7 @@
           >
         </li>
         <li class="navigation-item">
-          <a href="#service" class="navigation-link"
+          <a @click="closeNavigation" href="#service" class="navigation-link"
             ><span class="navigation-icon"><i class="fas fa-cogs"></i> </span>
             <div class="navigation-text">
               <p class="letter">S</p>
@@ -45,7 +45,7 @@
           >
         </li>
         <li class="navigation-item">
-          <a href="#skills" class="navigation-link"
+          <a @click="closeNavigation" href="#skills" class="navigation-link"
             ><span class="navigation-icon"><i class="fas fa-code"></i></span>
             <div class="navigation-text">
               <p class="letter">S</p>
@@ -58,7 +58,7 @@
           >
         </li>
         <li class="navigation-item">
-          <a href="#portfolio" class="navigation-link"
+          <a @click="closeNavigation" href="#portfolio" class="navigation-link"
             ><span class="navigation-icon"
               ><i class="fas fa-briefcase"></i
             ></span>
@@ -76,7 +76,7 @@
           >
         </li>
         <li class="navigation-item">
-          <a href="#contact" class="navigation-link"
+          <a @click="closeNavigation" href="#contact" class="navigation-link"
             ><span class="navigation-icon"
               ><i class="fas fa-envelope"></i
             ></span>
@@ -116,6 +116,12 @@ export default {
       }
     };
 
+    const closeNavigation = () => {
+      setTimeout(() => {
+        isShowing.value = false;
+      }, 900);
+    };
+
     onMounted(() => {
       updateWidth();
       window.addEventListener("resize", updateWidth);
@@ -125,7 +131,7 @@ export default {
       window.removeEventListener("resize", updateWidth);
     });
 
-    return { showNav, isShowing, computeWidth, updateWidth };
+    return { showNav, isShowing, computeWidth, updateWidth, closeNavigation };
   },
 };
 </script>
