@@ -117,9 +117,11 @@ export default {
     };
 
     const closeNavigation = () => {
-      setTimeout(() => {
-        isShowing.value = false;
-      }, 900);
+      if (computeWidth.value <= 1200) {
+        setTimeout(() => {
+          isShowing.value = false;
+        }, 900);
+      }
     };
 
     onMounted(() => {
