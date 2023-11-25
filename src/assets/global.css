@@ -1339,13 +1339,14 @@ body::-webkit-scrollbar-thumb {
   }
   .portfolio-box img {
     object-fit: inherit;
-    min-height: 400px;
+    min-height: 450px;
+    object-fit: cover;
   }
 }
 
-@media (1920px <= width) {
+@media (1920px < width) {
   .welcome-text {
-    top: 15%;
+    top: 8%;
   }
   #app {
     position: relative;
