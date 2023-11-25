@@ -7,7 +7,7 @@ import AOS from "aos";
 
 AOS.init({
   duration: 1000,
-  offset: 200,
+  offset: 250,
   once: true,
   startEvent: "DOMContentLoaded",
 });

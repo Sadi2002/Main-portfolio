@@ -17,7 +17,7 @@
       </div>
       <div
         data-aos="fade-up"
-        data-aos-delay="200"
+        data-aos-delay="100"
         class="service-box"
         ref="tiltBox2"
       >
@@ -31,7 +31,7 @@
       </div>
       <div
         data-aos="fade-up"
-        data-aos-delay="400"
+        data-aos-delay="200"
         class="service-box"
         ref="tiltBox3"
       >
