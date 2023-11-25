@@ -129,6 +129,13 @@ export default {
       updateWidth();
       window.addEventListener("resize", updateWidth);
       AOS.refresh();
+      if (computeWidth.value <= 1200) {
+        const allLinks = document.querySelectorAll(".navigation-item");
+        allLinks.forEach((link) => {
+          link.removeAttribute("data-aos", "fade-right");
+          link.classList.remove("aos-init");
+        });
+      }
     });
 
     onUnmounted(() => {
