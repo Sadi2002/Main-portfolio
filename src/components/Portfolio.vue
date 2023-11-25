@@ -96,7 +96,7 @@
         </div>
       </div>
     </div>
-    <button class="show-more" data-aos="fade-up" data-aos-delay="200">
+    <button class="show-more">
       <a href="https://github.com/Sadi2002" target="_blank">Show more</a>
     </button>
   </div>
