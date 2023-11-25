@@ -1,9 +1,11 @@
 <template>
   <div class="about-me" id="about">
-    <span class="about-me-headline">About me</span>
-    <h2 class="about-me-title">Passionate learner exploring web development</h2>
+    <span data-aos="fade-up" class="about-me-headline">About me</span>
+    <h2 data-aos="fade-up" data-aos-delay="200" class="about-me-title">
+      Passionate learner exploring web development
+    </h2>
     <div class="both-sides">
-      <div class="about-me-left-side">
+      <div class="about-me-left-side" data-aos="fade-up">
         <div class="about-me-left-side__box">
           <img src="../assets/ambition.png" alt="bolt logo" />
           <h3 class="about-me-left-side__title">My Ambition</h3>
@@ -14,7 +16,7 @@
             skills.
           </p>
         </div>
-        <div class="about-me-left-side__box">
+        <div class="about-me-left-side__box" data-aos="fade-up">
           <img src="../assets/purpose.png" alt="purpose logo" />
           <h3 class="about-me-left-side__title">My Purpose</h3>
           <p class="about-me-left-side__description">
@@ -26,7 +28,7 @@
           </p>
         </div>
       </div>
-      <div class="about-me-right-side">
+      <div class="about-me-right-side" data-aos="fade-left">
         <img class="square" src="../assets/square.png" alt="square" />
         <div class="about-me-img">
           <img class="me" src="../assets/me-on-bg.png" alt="myself" />
@@ -37,7 +39,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  setup() {},
+};
 </script>
 
 <style></style>

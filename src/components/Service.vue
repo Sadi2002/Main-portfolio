@@ -1,11 +1,11 @@
 <template>
   <div class="service" id="service">
-    <span class="service-headline">My Service</span>
-    <h2 class="service-title">
+    <span data-aos="fade-up" class="service-headline">My Service</span>
+    <h2 data-aos="fade-up" data-aos-delay="200" class="service-title">
       Bringing your vision to life with precision and passion
     </h2>
     <div class="service-container">
-      <div class="service-box" ref="tiltBox1">
+      <div data-aos="fade-up" class="service-box" ref="tiltBox1">
         <i class="fas fa-code"></i>
         <h3 class="service-box-title">Website Coding</h3>
         <p class="service-box-description">
@@ -15,7 +15,12 @@
           user engagement and drive business success.
         </p>
       </div>
-      <div class="service-box" ref="tiltBox2">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="200"
+        class="service-box"
+        ref="tiltBox2"
+      >
         <i class="fas fa-mobile-alt"></i>
         <h3 class="service-box-title">Responsive design</h3>
         <p class="service-box-description">
@@ -24,7 +29,12 @@
           people browse the internet today.
         </p>
       </div>
-      <div class="service-box" ref="tiltBox3">
+      <div
+        data-aos="fade-up"
+        data-aos-delay="400"
+        class="service-box"
+        ref="tiltBox3"
+      >
         <i class="fas fa-feather icon"></i>
         <h3 class="service-box-title">Clean design</h3>
         <p class="service-box-description">

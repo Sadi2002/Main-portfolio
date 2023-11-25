@@ -1,9 +1,11 @@
 <template>
   <div class="skills" id="skills">
-    <span class="skills-headline">My Skills</span>
-    <h2 class="skills-title">Skills and Competencies</h2>
+    <span data-aos="fade-up" class="skills-headline">My Skills</span>
+    <h2 data-aos="fade-up" data-aos-delay="200" class="skills-title">
+      Skills and Competencies
+    </h2>
     <div class="competencies">
-      <div class="competencies-buttons">
+      <div class="competencies-buttons" data-aos="fade-up">
         <div
           class="competencies-button"
           @click="showContext(1)"
@@ -26,7 +28,7 @@
           Experience
         </div>
       </div>
-      <div class="competencies-context">
+      <div class="competencies-context" data-aos="fade-up" data-aos-delay="300">
         <div class="context-box" ref="context1">
           <div class="context1-left">
             <h3 class="context-box-title">

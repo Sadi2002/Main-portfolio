@@ -6,7 +6,7 @@
     <div class="navigation-top"></div>
     <div class="navigation-bottom">
       <ul class="navigation-list">
-        <li class="navigation-item">
+        <li class="navigation-item" data-aos="fade-right" data-aos-delay="1000">
           <a @click="closeNavigation" href="#" class="navigation-link">
             <span class="navigation-icon"><i class="fas fa-home"></i></span>
             <div class="navigation-text">
@@ -17,7 +17,7 @@
             </div>
           </a>
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item" data-aos="fade-right" data-aos-delay="1200">
           <a @click="closeNavigation" href="#about" class="navigation-link"
             ><span class="navigation-icon"><i class="far fa-id-card"></i></span>
             <div class="navigation-text">
@@ -29,7 +29,7 @@
             </div></a
           >
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item" data-aos="fade-right" data-aos-delay="1400">
           <a @click="closeNavigation" href="#service" class="navigation-link"
             ><span class="navigation-icon"><i class="fas fa-cogs"></i> </span>
             <div class="navigation-text">
@@ -44,7 +44,7 @@
             </div></a
           >
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item" data-aos="fade-right" data-aos-delay="1600">
           <a @click="closeNavigation" href="#skills" class="navigation-link"
             ><span class="navigation-icon"><i class="fas fa-code"></i></span>
             <div class="navigation-text">
@@ -57,7 +57,7 @@
             </div></a
           >
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item" data-aos="fade-right" data-aos-delay="1800">
           <a @click="closeNavigation" href="#portfolio" class="navigation-link"
             ><span class="navigation-icon"
               ><i class="fas fa-briefcase"></i
@@ -75,7 +75,7 @@
             </div></a
           >
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item" data-aos="fade-right" data-aos-delay="2000">
           <a @click="closeNavigation" href="#contact" class="navigation-link"
             ><span class="navigation-icon"
               ><i class="fas fa-envelope"></i
@@ -97,6 +97,7 @@
 </template>
 
 <script>
+import AOS from "aos";
 import { onMounted, onUnmounted, ref } from "vue";
 export default {
   setup() {
@@ -127,6 +128,7 @@ export default {
     onMounted(() => {
       updateWidth();
       window.addEventListener("resize", updateWidth);
+      AOS.refresh();
     });
 
     onUnmounted(() => {
